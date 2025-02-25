@@ -24,6 +24,8 @@ const messages = [
 ];
 
 // Routing
-app.get('/', (req, res) => {});
+app.get('/', (req, res) => {
+	res.render('index', { title: 'Mini Messageboard', messages });
+});
 
 app.get('/new', (req, res) => {});
