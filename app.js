@@ -14,6 +14,10 @@ app.set('view engine', 'ejs');
 // Parse the form data into req.body
 app.use(express.urlencoded({ extended: true }));
 
+// Set up static path for styles.css
+const assetsPath = path.join(__dirname, 'public');
+app.use(express.static(assetsPath));
+
 // Routing
 app.use('/', indexRouter);
 app.use('/new', newRouter);
