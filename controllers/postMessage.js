@@ -6,7 +6,7 @@ const postMessage = (req, res) => {
 	messages.push({
 		text: message,
 		user: user,
-		date: new Date(),
+		added: new Date(),
 	});
 
 	res.redirect('/');
